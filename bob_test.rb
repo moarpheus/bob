@@ -4,19 +4,19 @@ require_relative 'bob'
 # Common test data version: 1.6.0 42b9d45
 class BobTest < Minitest::Test
   def test_stating_something
-    # skip
+    skip
     remark = "Tom-ay-to, tom-aaaah-to."
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "Tom-ay-to, tom-aaaah-to.", and..}
   end
 
   def test_shouting
-    skip
+    # skip
     remark = "WATCH OUT!"
     assert_equal "Whoa, chill out!", Bob.hey(remark), %q{Bob hears "WATCH OUT!", and..}
   end
 
   def test_shouting_gibberish
-    skip
+    # skip
     remark = "FCECDFCAAB"
     assert_equal "Whoa, chill out!", Bob.hey(remark), %q{Bob hears "FCECDFCAAB", and..}
   end
@@ -58,7 +58,7 @@ class BobTest < Minitest::Test
   end
 
   def test_shouting_numbers
-    skip
+    # skip
     remark = "1, 2, 3 GO!"
     assert_equal "Whoa, chill out!", Bob.hey(remark), %q{Bob hears "1, 2, 3 GO!", and..}
   end
@@ -76,13 +76,13 @@ class BobTest < Minitest::Test
   end
 
   def test_shouting_with_special_characters
-    skip
+    # skip
     remark = "ZOMG THE %^*@\#$(*^ ZOMBIES ARE COMING!!11!!1!"
     assert_equal "Whoa, chill out!", Bob.hey(remark), %q{Bob hears "ZOMG THE %^*@\#$(*^ ZOMBIES ARE COMING!!11!!1!", and..}
   end
 
   def test_shouting_with_no_exclamation_mark
-    skip
+    # skip
     remark = "I HATE THE DENTIST"
     assert_equal "Whoa, chill out!", Bob.hey(remark), %q{Bob hears "I HATE THE DENTIST", and..}
   end
