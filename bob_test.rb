@@ -22,19 +22,19 @@ class BobTest < Minitest::Test
   end
 
   def test_asking_a_question
-    skip
+    # skip
     remark = "Does this cryogenic chamber make me look fat?"
     assert_equal "Sure.", Bob.hey(remark), %q{Bob hears "Does this cryogenic chamber make me look fat?", and..}
   end
 
   def test_asking_a_numeric_question
-    skip
+    # skip
     remark = "You are, what, like 15?"
     assert_equal "Sure.", Bob.hey(remark), %q{Bob hears "You are, what, like 15?", and..}
   end
 
   def test_asking_gibberish
-    skip
+    # skip
     remark = "fffbbcbeab?"
     assert_equal "Sure.", Bob.hey(remark), %q{Bob hears "fffbbcbeab?", and..}
   end
@@ -70,7 +70,7 @@ class BobTest < Minitest::Test
   end
 
   def test_question_with_no_letters
-    skip
+    # skip
     remark = "4?"
     assert_equal "Sure.", Bob.hey(remark), %q{Bob hears "4?", and..}
   end
@@ -94,7 +94,7 @@ class BobTest < Minitest::Test
   end
 
   def test_non_letters_with_question
-    skip
+    # skip
     remark = ":) ?"
     assert_equal "Sure.", Bob.hey(remark), %q{Bob hears ":) ?", and..}
   end
@@ -136,7 +136,7 @@ class BobTest < Minitest::Test
   end
 
   def test_ending_with_whitespace
-    skip
+    # skip
     remark = "Okay if like my  spacebar  quite a bit?   "
     assert_equal "Sure.", Bob.hey(remark), %q{Bob hears "Okay if like my  spacebar  quite a bit?   ", and..}
   end

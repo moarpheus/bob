@@ -6,8 +6,8 @@ class Bob
       case
       when shouting?(remark)
         "Whoa, chill out!"
-      when silence?(remark)
-        return "Fine. Be that way!"
+      # when silence?(remark)
+      #   return "Fine. Be that way!"
       when question?(remark)
         return "Sure."
       end
@@ -28,7 +28,7 @@ class Bob
     end
 
     def shouting? remark
-      remark == remark.upcase
+      remark == remark.upcase && remark.count("a-zA-Z") > 0
     end
   end
 end
