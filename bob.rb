@@ -6,20 +6,12 @@ class Bob
       case
       when shouting?(remark)
         "Whoa, chill out!"
-      # when silence?(remark)
-      #   return "Fine. Be that way!"
       when question?(remark)
         return "Sure."
       end
     end
 
     private
-
-    def silence? remark
-      result = (remark =~ /\s/)
-      return false if (result.nil?) || (result == 0)
-      true
-    end
 
     def question? remark
       result = (remark =~ /\?/)
