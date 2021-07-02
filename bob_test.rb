@@ -4,7 +4,7 @@ require_relative 'bob'
 # Common test data version: 1.6.0 42b9d45
 class BobTest < Minitest::Test
   def test_stating_something
-    skip
+    # skip
     remark = "Tom-ay-to, tom-aaaah-to."
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "Tom-ay-to, tom-aaaah-to.", and..}
   end
@@ -40,13 +40,13 @@ class BobTest < Minitest::Test
   end
 
   def test_talking_forcefully
-    skip
+    # skip
     remark = "Hi there!"
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "Hi there!", and..}
   end
 
   def test_using_acronyms_in_regular_speech
-    skip
+    # skip
     remark = "It's OK if you don't want to go work for NASA."
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "It's OK if you don't want to go work for NASA.", and..}
   end
@@ -64,7 +64,7 @@ class BobTest < Minitest::Test
   end
 
   def test_no_letters
-    skip
+    # skip
     remark = "1, 2, 3"
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "1, 2, 3", and..}
   end
@@ -100,7 +100,7 @@ class BobTest < Minitest::Test
   end
 
   def test_prattling_on
-    skip
+    # skip
     remark = "Wait! Hang on. Are you going to be OK?"
     assert_equal "Sure.", Bob.hey(remark), %q{Bob hears "Wait! Hang on. Are you going to be OK?", and..}
   end
@@ -124,13 +124,13 @@ class BobTest < Minitest::Test
   end
 
   def test_multiple_line_question
-    skip
+    # skip
     remark = "\nDoes this cryogenic chamber make me look fat?\nNo."
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "\nDoes this cryogenic chamber make me look fat?\nNo.", and..}
   end
 
   def test_starting_with_whitespace
-    skip
+    # skip
     remark = "         hmmmmmmm..."
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "         hmmmmmmm...", and..}
   end
@@ -148,7 +148,7 @@ class BobTest < Minitest::Test
   end
 
   def test_non_question_ending_with_whitespace
-    skip
+    # skip
     remark = "This is a statement ending with whitespace      "
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "This is a statement ending with whitespace      ", and..}
   end
