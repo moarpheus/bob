@@ -52,7 +52,7 @@ class BobTest < Minitest::Test
   end
 
   def test_forceful_question
-    skip
+    # skip
     remark = "WHAT'S GOING ON?"
     assert_equal "Calm down, I know what I'm doing!", Bob.hey(remark), %q{Bob hears "WHAT'S GOING ON?", and..}
   end
