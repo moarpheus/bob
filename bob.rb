@@ -10,6 +10,8 @@ class Bob
         "Whoa, chill out!"
       when question?(remark)
         "Sure."
+      else
+        "Whatever."
       end
     end
 
@@ -21,7 +23,7 @@ class Bob
 
     def question? remark
       result = (remark =~ /\?/)
-      return false if (result.nil?) || (result == 0)
+      return false if (result.nil?) || (result == 0) || (remark.strip.split('').last != "?")
       true
     end
 

@@ -88,7 +88,7 @@ class BobTest < Minitest::Test
   end
 
   def test_statement_containing_question_mark
-    skip
+    # skip
     remark = "Ending with ? means a question."
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "Ending with ? means a question.", and..}
   end
