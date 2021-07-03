@@ -106,19 +106,19 @@ class BobTest < Minitest::Test
   end
 
   def test_silence
-    skip
+    # skip
     remark = ""
     assert_equal "Fine. Be that way!", Bob.hey(remark), %q{Bob hears "", and..}
   end
 
   def test_prolonged_silence
-    skip
+    # skip
     remark = "          "
     assert_equal "Fine. Be that way!", Bob.hey(remark), %q{Bob hears "          ", and..}
   end
 
   def test_alternate_silence
-    skip
+    # skip
     remark = "\t\t\t\t\t\t\t\t\t\t"
     assert_equal "Fine. Be that way!", Bob.hey(remark), %q{Bob hears "\t\t\t\t\t\t\t\t\t\t", and..}
   end
@@ -142,7 +142,7 @@ class BobTest < Minitest::Test
   end
 
   def test_other_whitespace
-    skip
+    # skip
     remark = "\n\r \t"
     assert_equal "Fine. Be that way!", Bob.hey(remark), %q{Bob hears "\n\r \t", and..}
   end

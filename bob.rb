@@ -1,5 +1,3 @@
-require 'byebug'
-
 class Bob
   class << self
     def hey remark
@@ -10,12 +8,18 @@ class Bob
         "Whoa, chill out!"
       when question?(remark)
         "Sure."
+      when empty?(remark)
+        "Fine. Be that way!"
       else
         "Whatever."
       end
     end
 
     private
+
+    def empty? remark
+      remark.strip.empty?
+    end
 
     def shouting_question? remark
       (question?(remark) && shouting?(remark))
